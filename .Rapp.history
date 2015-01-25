@@ -1,0 +1,981 @@
+new <- function (x)#
+{#
+	x <- matrix(nrow = 3, ncol = 3)#
+	print (x)#
+}
+new()
+new <- function (x)#
+{#
+	x <- matrix(nrow = 3, ncol = 3)#
+	print (x)#
+	dim(x)#
+	attributes(x)#
+}
+new()
+new2 <- function (x)#
+{#
+	x <- matrix(0:9, nrow = 3, ncol = 3)#
+	print (x)#
+}
+new2()
+new2 <- function (x)#
+{#
+	x <- matrix(1:9, nrow = 3, ncol = 3)#
+	print (x)#
+}
+new2()
+new3 <- function(x)#
+{#
+	x <- 1:9#
+	print (x)#
+	dim(x) <- c(2, 3)#
+	print (x)#
+}
+new3()
+new3 <- function(x)#
+{#
+	x <- 1:9#
+	print (x)#
+	dim(x) <- c(3, 3)#
+	print (x)#
+}
+new3()
+new3 <- function(x)#
+{#
+	x <- 1:9#
+	y <- 11:19#
+	cbind(x, y)#
+	print (x, y)#
+	rbind(x, y)#
+	print (x, y)#
+}
+new3()
+new4 <- function(x)#
+{#
+	x <- 1:9#
+	y <- 11:19#
+	m <- cbind(x, y)#
+	print (m)#
+	n <- rbind(x, y)#
+	print (x, y)#
+}
+new4()
+new4 <- function(x)#
+{#
+	x <- 1:9#
+	y <- 11:19#
+	#m <- cbind(x, y)#
+	#print (m)#
+	n <- rbind(x, y)#
+	print (x, y)#
+}
+new4()
+new4 <- function(x)#
+{#
+	x <- 1:9#
+	y <- 11:19#
+	m <- cbind(x, y)#
+	print (m)#
+	n <- rbind(x, y)#
+	print (n)#
+}
+new4()
+fac <- function(x)#
+{#
+	x <- factor(c(yesn, no, maybe, no, yes, no, yes, yes, maybe))#
+	print (x)#
+	level (x)#
+	table (x)#
+	unclass (x)#
+}
+fac()
+fac <- function(x)#
+{#
+	x <- factor(c(yes, no, maybe, no, yes, no, yes, yes, maybe))#
+	print (x)#
+	level (x)#
+	table (x)#
+	unclass (x)#
+}
+fac()
+fac <- function(x)#
+{#
+	x <- factor(c("yes", "no", "maybe", "no", "yes", "no", "yes", "yes", "maybe"))#
+	print (x)#
+	levels (x)#
+	table (x)#
+	unclass (x)#
+}
+fac()
+fac <- function(x)#
+{#
+	x <- factor(c("yes", "no", "maybe", "no", "yes", "no", "yes", "yes", "maybe"))#
+	print (x)#
+}
+fac()
+fac <- function(x)#
+{#
+	x <- factor(c("yes", "no", "maybe", "no", "yes", "no", "yes", "yes", "maybe"))#
+	print (x)#
+	table (x)#
+}
+fac()
+fac <- function(x)#
+{#
+	x <- factor(c("yes", "no", "maybe", "no", "yes", "no", "yes", "yes", "maybe"))#
+	print (x)#
+	table (x)#
+	unclass (x)#
+}
+fac()
+fac <- function(x)#
+{#
+	x <- factor(c("yes", "no", "maybe", "no", "yes", "no", "yes", "yes", "maybe"))#
+	print (x)#
+	#table (x)#
+	unclass (x)#
+}
+fac()
+fac <- function(x)#
+{#
+	x <- factor(c("yes", "no", "maybe", "no", "yes", "no", "yes", "yes", "maybe"))#
+	print (x)#
+	table (x)#
+	#unclass (x)#
+}
+fac()
+fac <- function(x)#
+{#
+	x <- factor(c("yes", "no", "maybe", "no", "yes", "no", "yes", "yes", "maybe"), levels = c("yes", "no", "maybe"))#
+	print (x)#
+	table (x)#
+	#unclass (x)#
+}
+fac()
+anyfunc <- function (x) #
+{#
+	x <- rnorm(100)#
+	print (x)#
+	y <-sd (x)#
+	print (y)#
+}
+anyfunc ()
+anyfunc <- function (x) #
+{#
+	x <- rnorm(100)#
+	print (x)#
+	y <- sd (x)#
+	print (y)#
+}
+anyfunc ()
+formals()
+function()
+function(formals)
+exit()
+formals
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, ebter any 2 numbers you want to add\n")#
+	pow <- function (x, y) {#
+		z = x + y#
+	}#
+	print ("Sum of the two numbers is")#
+	print (pow)#
+}
+newfunc ()
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, ebter any 2 numbers you want to add\n")#
+pow <- function (x, y) {#
+		z = x + y#
+	}#
+	print ("Sum of the two numbers is")#
+	print (pow)#
+}
+newfunc ()
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+pow <- function (x, y) {#
+		z = x + y#
+	}#
+	pow ()#
+	print ("Sum of the two numbers is")#
+	print (pow)#
+}
+newfunc ()
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+pow <- function (x, y) {#
+		z = x + y#
+	}#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	print (pow)#
+}
+newfunc ()
+scan()
+help (scan)
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (what = "numeric", nmax = 1)#
+	y <- scan (what = "numeric", nmax = 1)#
+pow <- function (x, y) {#
+		z = x + y#
+	}#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	print (pow)#
+}
+newfunc ()
+3 4
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (what = "numeric", nmax = 1)#
+	y <- scan (what = "numeric", nmax = 1)#
+	print (x); print (y);#
+pow <- function (x, y) {#
+		z = x + y#
+	}#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	print (pow)#
+}
+newfunc ()
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (what = "numeric", nmax = 1); class (x);#
+	y <- scan (what = "numeric", nmax = 1); class (y);#
+	print (x); print (y);#
+pow <- function (x, y) {#
+		z = x + y#
+	}#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	print (pow)#
+}
+newfunc ()
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (what = "numeric", nmax = 1); print(class(x));#
+	y <- scan (what = "numeric", nmax = 1); print(class(y));#
+	print (x); print (y);#
+pow <- function (x, y) {#
+		z = x + y#
+	}#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	print (pow)#
+}
+newfunc ()
+help (scan)
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (file = "", what = "numeric", nmax = 1); print(class(x));#
+	y <- scan (file = "", what = "numeric", nmax = 1); print(class(y));#
+	print (x); print (y);#
+pow <- function (x, y) {#
+		z = x + y#
+	}#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	print (pow)#
+}
+newfunc ()
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x));#
+	y <- scan (nmax = 1); print(class(y));#
+	print (x); print (y);#
+pow <- function (x, y) {#
+		z = x + y#
+	}#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	print (pow)#
+}
+newfunc ()
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x));#
+	y <- scan (nmax = 1); print(class(y));#
+	print (x); print (y);#
+	pow (x, y)#
+pow <- function (x, y) {#
+		z = x + y#
+	}#
+	print ("Sum of the two numbers is")#
+	print (pow)#
+}
+newfunc ()
+newfunc <- function () {#
+	pow <- function (x, y) {#
+		z = x + y#
+	}#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x));#
+	y <- scan (nmax = 1); print(class(y));#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	print (pow)#
+}
+newfunc ()
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x));#
+	y <- scan (nmax = 1); print(class(y));#
+	pow <- function (x, y) {#
+		z = x + y#
+	}#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	print (pow)#
+}
+newfunc ()
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x));#
+	y <- scan (nmax = 1); print(class(y));#
+	pow <- function (x, y) {#
+		z = x + y#
+	}#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	print (z)#
+}
+newfunc ()
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x));#
+	y <- scan (nmax = 1); print(class(y));#
+	pow <- function (x, y) {#
+		z = x + y#
+	}#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	print (pow())#
+}
+newfunc ()
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x)); print (x);#
+	y <- scan (nmax = 1); print(class(y)); print (y);#
+	pow <- function (x, y) {#
+		z = x + y#
+	}#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	print (pow())#
+}
+23
+34
+exit ()
+exit()
+exit();
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x)); print (x);#
+	y <- scan (nmax = 1); print(class(y)); print (y);#
+	pow <- function (x, y) {#
+		z = x + y#
+	}#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	print (pow())#
+}
+newfunc ()
+newfunc <- function () {#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x)); print (x);#
+	y <- scan (nmax = 1); print(class(y)); print (y);#
+	pow <- function (x, y) {#
+		z = x + y#
+	}#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	print (z)#
+}
+newfunc ()
+newfunc <- function () {#
+	pow <- function (x, y) {#
+		z = x + y#
+	}#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x)); print (x);#
+	y <- scan (nmax = 1); print(class(y)); print (y);#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	print (z)#
+}
+newfunc ()
+newfunc <- function () {#
+	pow <- function (x, y) {#
+		z = x + y#
+	}#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x)); print (x);#
+	y <- scan (nmax = 1); print(class(y)); print (y);#
+	pow (x, y)#
+	print ("Sum of the two numbers is")#
+	pow#
+}
+newfunc ()
+newfunc <- function () {#
+	add <- function (x, y) {#
+		z = x + y#
+	}#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x)); print (x);#
+	y <- scan (nmax = 1); print(class(y)); print (y);#
+	add (x, y)#
+	print ("Sum of the two numbers is")#
+	print (z)#
+}
+newfunc ()
+newfunc <- function () {#
+	add <- function (x, y) {#
+		z = x + y#
+		print (z)#
+	}#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x)); print (x);#
+	y <- scan (nmax = 1); print(class(y)); print (y);#
+	add (x, y)#
+	print ("Sum of the two numbers is")#
+	print (z)#
+}
+newfunc ()
+?do.call
+newfunc <- function () {#
+	add <- function (x, y) {#
+		z = x + y#
+		print (z)#
+	}#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x)); print (x);#
+	y <- scan (nmax = 1); print(class(y)); print (y);#
+	do.call(add)#
+	print ("Sum of the two numbers is")#
+	print (z)#
+}
+newfunc ()
+newfunc <- function () {#
+	add <- function (x, y) {#
+		z = x + y#
+		print (z)#
+	}#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x)); print (x);#
+	y <- scan (nmax = 1); print(class(y)); print (y);#
+	do.call(add, (x,y))#
+	print ("Sum of the two numbers is")#
+	print (z)#
+}
+newfunc <- function () {#
+	add <- function (x, y) {#
+		z = x + y#
+		print (z)#
+	}#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x)); print (x);#
+	y <- scan (nmax = 1); print(class(y)); print (y);#
+	do.call(add, agrs = x,y)#
+	print ("Sum of the two numbers is")#
+	print (z)#
+}
+newfunc ()
+make.power <- function(n) {pow <- function(x) {x^n}pow}
+cube <- make.power(3)
+cube(3)
+newfunc <- function (x, y) {#
+	add <- function (x, y) {#
+		z = x + y#
+		print (z)#
+	}#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x)); print (x);#
+	y <- scan (nmax = 1); print(class(y)); print (y);#
+	add (x, y)#
+	print ("Sum of the two numbers is")#
+	print (z)#
+}
+newfunc ()
+newfunc <- function (x, y, z) {#
+	add <- function (x, y) {#
+		z = x + y#
+		print (z)#
+	}#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x)); print (x);#
+	y <- scan (nmax = 1); print(class(y)); print (y);#
+	add (x, y)#
+	print ("Sum of the two numbers is")#
+	print (z)#
+}
+newfunc ()
+newfunc <- function () {#
+	add <- function (x, y) {#
+		print (x); print (y);#
+		z = x + y#
+		print (z)#
+	}#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); print(class(x)); print (x);#
+	y <- scan (nmax = 1); print(class(y)); print (y);#
+	add (x, y)#
+	print ("Sum of the two numbers is")#
+	print (z)#
+}
+newfunc ()
+newfunc <- function () {#
+	add <- function (x, y) {#
+		print ("Sum of the two numbers is")#
+		z = x + y#
+		print (z)#
+	}#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); #
+	y <- scan (nmax = 1); #
+	add (x, y)#
+}
+newfunc ()
+vectors <- function () {#
+	x <- vector ("numeric", length = 10)#
+	print (x);#
+	x[1] <- scan ();#
+	print (x)#
+}
+vactors ()
+vectors ()
+32
+newfunc <- function () {#
+	add <- function (x, y) {#
+		print ("Sum of the two numbers is")#
+		z = x + y#
+		print (z)#
+	}#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); #
+	y <- scan (nmax = 1); #
+	add (x, y)#
+	print (z)#
+}
+newfunc ()
+newfunc <- function () {#
+	add <- function (x, y) {#
+		print ("Sum of the two numbers is")#
+		z = x + y#
+		print (z)#
+	}#
+	print ("Smile, you don't own all thr problems in this world")#
+	print ("Now, enter any 2 numbers you want to add\n")#
+	x <- scan (nmax = 1); #
+	y <- scan (nmax = 1); #
+	add (x, y)#
+	}
+newfunc ()
+ls(environment(newfunc))
+newfunc ()
+newfunc2 <- function () {#
+	add <- function (x, y) {#
+		print ("Sum of the two numbers is")#
+		z = x + y#
+		print (z)#
+	}#
+	add (x, y)#
+	}
+newfunc2 ()
+z <- newfunc2 ()
+z <- newfunc2 (3)
+add (10, 20)
+newfunc2 <- function (n) {#
+	add <- function (x, y) {#
+		print ("Sum of the two numbers is")#
+		z = (x + y)^n#
+		print (z)#
+	}#
+	add #
+	}
+z <- newfunc2 (3)
+add (10, 10)
+z <- newfunc2 (3)
+z (10, 10)
+power <- function (n) {#
+	sum <- function (x, y) {#
+		print ("Sum of the two numbers is")#
+		z = (x + y)^n#
+		print (z)#
+	}#
+	sum #
+	}
+power (2)
+z <- power (2)
+z (3, 4)
+pollutantmean <- function(directory) {#
+	setwd (directory)#
+	directory#
+	}
+pollutantmean (/Users/shantanupawar/Desktop/Coursera/R-programming/specdata)
+pollutantmean (""/Users/shantanupawar/Desktop/Coursera/R-programming/specdata")
+getwd()
+exut
+exit
+}
+getwd()
+complete <- function(directory, id) {#
+	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/specdata"}#
+	setwd (directory)#
+	x <- dir()	#
+	n = length(id)#
+	z <- 1#
+	tab <- data.frame(MonitorID = numeric(n), cases = numeric(n))#
+if (n > 1){	#
+	for (i in id) {#
+		file <- read.csv(x[i])#
+		cc <- complete.cases(file)#
+		logi <- table(cc)#
+		if (nrow(file) == logi[[1]]) {     #
+			tab$cases[i] <- 0;#
+			z = z + 1}#
+		else {#
+			tab$MonitorID[i] <- i#
+    		tab$cases[i] <- logi[[2]];#
+    		z = z + 1#
+}}}#
+else #
+{		#
+	file <- read.csv(x[id])#
+	cc <- complete.cases(file)#
+	logi <- table(cc)#
+	if (nrow(file) == logi[[1]]) { #
+		tab$cases[n] <- 0}#
+	else {#
+		tab$MonitorID[n] <- id#
+    	tab$cases[n] <- logi[[2]]#
+}#
+			}#
+print(tab)#
+ }
+complete ("specdata", 1:10)
+complete ("specdata", 10:1)
+complete <- function(directory, id) {#
+	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/specdata"}#
+	setwd (directory)#
+	x <- dir()	#
+	n = length(id)#
+	z <- 1#
+	tab <- data.frame(MonitorID = numeric(n), cases = numeric(n))#
+if (n > 1){	#
+	for (i in id) {#
+		file <- read.csv(x[i])#
+		cc <- complete.cases(file)#
+		logi <- table(cc)#
+		if (nrow(file) == logi[[1]]) {     #
+			tab$cases[i] <- 0;#
+			z = z + 1}#
+		else {#
+			tab$MonitorID[z] <- i#
+    		tab$cases[z] <- logi[[2]];#
+    		z = z + 1#
+}}}#
+else #
+{		#
+	file <- read.csv(x[id])#
+	cc <- complete.cases(file)#
+	logi <- table(cc)#
+	if (nrow(file) == logi[[1]]) { #
+		tab$cases[n] <- 0}#
+	else {#
+		tab$MonitorID[n] <- id#
+    	tab$cases[n] <- logi[[2]]#
+}#
+			}#
+print(tab)#
+ }
+complete ("specdata", 1:10)
+complete ("specdata", 10:1)
+complete ("specdata", 1:332)
+complete ("specdata", 332:1)
+complete <- function(directory, id) {#
+	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/specdata"}#
+	setwd (directory)#
+	x <- dir()	#
+	n = length(id)#
+	z <- 1#
+	tab <- data.frame(MonitorID = numeric(n), cases = numeric(n))#
+if (n > 1){	#
+	for (i in id) {#
+		file <- read.csv(x[i])#
+		cc <- complete.cases(file)#
+		logi <- table(cc)#
+		if (nrow(file) == logi[[1]]) {     #
+			tab$cases[i] <- 0;#
+			tab$monitor[z] <- i#
+			z = z + 1}#
+		else {#
+			tab$MonitorID[z] <- i#
+    		tab$cases[z] <- logi[[2]];#
+    		z = z + 1#
+}}}#
+else #
+{		#
+	file <- read.csv(x[id])#
+	cc <- complete.cases(file)#
+	logi <- table(cc)#
+	if (nrow(file) == logi[[1]]) { #
+		tab$cases[n] <- 0}#
+	else {#
+		tab$MonitorID[n] <- id#
+    	tab$cases[n] <- logi[[2]]#
+}#
+			}#
+print(tab)#
+ }
+complete ("specdata", 1:332)
+complete <- function(directory, id) {#
+	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/specdata"}#
+	setwd (directory)#
+	x <- dir()	#
+	n = length(id)#
+	z <- 1#
+	tab <- data.frame(MonitorID = numeric(n), cases = numeric(n))#
+if (n > 1){	#
+	for (i in id) {#
+		file <- read.csv(x[i])#
+		cc <- complete.cases(file)#
+		logi <- table(cc)#
+		if (nrow(file) == logi[[1]]) {     #
+			tab$cases[z] <- 0;#
+			tab$monitor[z] <- i#
+			z = z + 1}#
+		else {#
+			tab$MonitorID[z] <- i#
+    		tab$cases[z] <- logi[[2]];#
+    		z = z + 1#
+}}}#
+else #
+{		#
+	file <- read.csv(x[id])#
+	cc <- complete.cases(file)#
+	logi <- table(cc)#
+	if (nrow(file) == logi[[1]]) { #
+		tab$cases[n] <- 0}#
+	else {#
+		tab$MonitorID[n] <- id#
+    	tab$cases[n] <- logi[[2]]#
+}#
+			}#
+print(tab)#
+ }
+complete ("specdata", 1:332)
+complete <- function(directory, id) {#
+	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/specdata"}#
+	setwd (directory)#
+	x <- dir()	#
+	n = length(id)#
+	z <- 1#
+	tab <- data.frame(MonitorID = numeric(n), cases = numeric(n))#
+if (n > 1){	#
+	for (i in id) {#
+		file <- read.csv(x[i])#
+		cc <- complete.cases(file)#
+		logi <- table(cc)#
+		if (nrow(file) == logi[[1]]) {     #
+			tab$cases[i] <- 0;#
+			z = z + 1}#
+		else {#
+			tab$MonitorID[z] <- i#
+    		tab$cases[z] <- logi[[2]];#
+    		z = z + 1#
+}}}#
+else #
+{		#
+	file <- read.csv(x[id])#
+	cc <- complete.cases(file)#
+	logi <- table(cc)#
+	if (nrow(file) == logi[[1]]) { #
+		tab$cases[n] <- 0}#
+	else {#
+		tab$MonitorID[n] <- id#
+    	tab$cases[n] <- logi[[2]]#
+}#
+			}#
+print(tab)#
+ }
+complete ("specdata", 1:332)
+complete <- function(directory, id) {#
+	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/specdata"}#
+	setwd (directory)#
+	x <- dir()	#
+	n = length(id)#
+	z <- 1#
+	tab <- data.frame(MonitorID = numeric(n), cases = numeric(n))#
+if (n > 1){	#
+	for (i in id) {#
+		file <- read.csv(x[i])#
+		cc <- complete.cases(file)#
+		logi <- table(cc)#
+		if (nrow(file) == logi[[1]]) {   #
+			tab$MonitorID[z] <- i  #
+			tab$cases[i] <- 0;#
+			z = z + 1}#
+		else {#
+			tab$MonitorID[z] <- i#
+    		tab$cases[z] <- logi[[2]];#
+    		z = z + 1#
+}}}#
+else #
+{		#
+	file <- read.csv(x[id])#
+	cc <- complete.cases(file)#
+	logi <- table(cc)#
+	if (nrow(file) == logi[[1]]) { #
+		tab$cases[n] <- 0}#
+	else {#
+		tab$MonitorID[n] <- id#
+    	tab$cases[n] <- logi[[2]]#
+}#
+			}#
+print(tab)#
+ }
+complete ("specdata", 1:332)
+complete ("specdata", 332:1)
+source("http://d396qusza40orc.cloudfront.net/rprog%2Fscripts%2Fsubmitscript1.R")
+submit()
+getwd()
+complete <- function(directory, id) {#
+	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/Directory"}#
+	setwd (directory)#
+	x <- dir()	#
+	n = length(id)#
+	z <- 1#
+	tab <- data.frame(MonitorID = numeric(n), cases = numeric(n))#
+if (n > 1){	#
+	for (i in id) {#
+		file <- read.csv(x[i])#
+		cc <- complete.cases(file)#
+		logi <- table(cc)#
+		if (nrow(file) == logi[[1]]) {   #
+			tab$MonitorID[z] <- i  #
+			tab$cases[i] <- 0;#
+			z = z + 1}#
+		else {#
+			tab$MonitorID[z] <- i#
+    		tab$cases[z] <- logi[[2]];#
+    		z = z + 1#
+}}}#
+else #
+{		#
+	file <- read.csv(x[id])#
+	cc <- complete.cases(file)#
+	logi <- table(cc)#
+	if (nrow(file) == logi[[1]]) { #
+		tab$cases[n] <- 0}#
+	else {#
+		tab$MonitorID[n] <- id#
+    	tab$cases[n] <- logi[[2]]#
+}#
+			}#
+print(tab)#
+ }
+complete ("specdata", 332:1)
+getwd()
+complete <- function(directory, id) {#
+	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/Directory"}#
+	setwd (directory)#
+	x <- dir()	#
+	n = length(id)#
+	z <- 1#
+	tab <- data.frame(MonitorID = numeric(n), cases = numeric(n))#
+if (n > 1){	#
+	for (i in id) {#
+		file <- read.csv(x[i])#
+		cc <- complete.cases(file)#
+		logi <- table(cc)#
+		if (nrow(file) == logi[[1]]) {   #
+			tab$MonitorID[z] <- i  #
+			tab$cases[i] <- 0;#
+			z = z + 1}#
+		else {#
+			tab$MonitorID[z] <- i#
+    		tab$cases[z] <- logi[[2]];#
+    		z = z + 1#
+}}}#
+else #
+{		#
+	file <- read.csv(x[id])#
+	cc <- complete.cases(file)#
+	logi <- table(cc)#
+	if (nrow(file) == logi[[1]]) { #
+		tab$cases[n] <- 0}#
+	else {#
+		tab$MonitorID[n] <- id#
+    	tab$cases[n] <- logi[[2]]#
+}#
+			}#
+print(tab)#
+ }
+complete <- function(directory, id) {#
+	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/Directory"}#
+	setwd (directory)#
+	x <- dir()	#
+	n = length(id)#
+	z <- 1#
+	tab <- data.frame(MonitorID = numeric(n), cases = numeric(n))#
+if (n > 1){	#
+	for (i in id) {#
+		file <- read.csv(x[i])#
+		cc <- complete.cases(file)#
+		logi <- table(cc)#
+		if (nrow(file) == logi[[1]]) {   #
+			tab$MonitorID[z] <- i  #
+			tab$cases[i] <- 0;#
+			z = z + 1}#
+		else {#
+			tab$MonitorID[z] <- i#
+    		tab$cases[z] <- logi[[2]];#
+    		z = z + 1#
+}}}#
+else #
+{		#
+	file <- read.csv(x[id])#
+	cc <- complete.cases(file)#
+	logi <- table(cc)#
+	if (nrow(file) == logi[[1]]) { #
+		tab$cases[n] <- 0}#
+	else {#
+		tab$MonitorID[n] <- id#
+    	tab$cases[n] <- logi[[2]]#
+}#
+			}#
+print(tab)#
+ }
+complete ("specdata", 1:332)
+getwd()

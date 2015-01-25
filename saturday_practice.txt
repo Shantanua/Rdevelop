@@ -1,0 +1,1209 @@
+> pollutantmean <- function(directory, pollutant = "", id) {
++ 	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/specdata"}
++ 	setwd (directory)
++ 	if (length(id) > 1){
++ 		x <- dir()	
++ 		n = length(id)		
++ 		means = vector(mode = "numeric", length = n)
++ 		for (i in id) {
++ 			file = read.csv(x[i])
++ 			if (pollutant == "nitrate")
++ 				{means[i] <- mean(file[ ,3], na.rm = TRUE)}
++ 			else {means[i] <- mean(file[ ,2], na.rm = TRUE)}
++ 						}
++ 						}
++ 	else {
++ 		x <- dir()	
++ 		file = read.csv(x[id])
++ 		n = nrow(file)		
++ 		means = vector(mode = "numeric", length = n)
++ 		if (pollutant == "nitrate")
++ 			{means <- mean(file[ ,3], na.rm = TRUE)}
++ 		else {means <- mean(file[ ,2], na.rm = TRUE)}
++ 		}
++ 		print(mean(means, na.rm = TRUE))
++ }
+> pollutantmean ("specdata", pollutant = "nitrate", 1:332)
+[1] 1.584008
+> pollutantmean ("specdata", pollutant = "nitrate", 70:72)
+[1] 0.6749954
+> pollutantmean ("specdata", pollutant = "nitrate", 23)
+[1] 1.280833
+> pollutantmean ("specdata", pollutant = "nitrate", 1:10)
+[1] 0.7281301
+> pollutantmean ("specdata", pollutant = "sulphate", 1:10)
+[1] 3.806771
+> pollutantmean ("specdata", pollutant = "nitrate", 23)
+[1] 1.280833
+> pollutantmean <- function(directory, pollutant = "", id) {
++ 	setwd (directory)
++ 	if (length(id) > 1){
++ 		x <- dir()	
++ 		n = length(id)		
++ 		means = vector(mode = "numeric", length = n)
++ 		for (i in id) {
++ 			file = read.csv(x[i])
++ 			if (pollutant == "nitrate")
++ 				{means[i] <- mean(file[ ,3], na.rm = TRUE)}
++ 			else {means[i] <- mean(file[ ,2], na.rm = TRUE)}
++ 						}
++ 						}
++ 	else {
++ 		x <- dir()	
++ 		file = read.csv(x[id])
++ 		n = nrow(file)		
++ 		means = vector(mode = "numeric", length = n)
++ 		if (pollutant == "nitrate")
++ 			{means <- mean(file[ ,3], na.rm = TRUE)}
++ 		else {means <- mean(file[ ,2], na.rm = TRUE)}
++ 		}
++ 		print(mean(means, na.rm = TRUE))
++ }
+> 
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 23)
+[1] 1.280833
+> pollutantmean <- function(directory, pollutant = "", id) {
++ 	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/specdata"}
++ 	setwd (directory)
++ 	if (length(id) > 1){
++ 		x <- dir()	
++ 		n = length(id)		
++ 		means = vector(mode = "numeric", length = n)
++ 		for (i in id) {
++ 			file = read.csv(x[i])
++ 			if (pollutant == "nitrate")
++ 				{means[i] <- mean(file[ ,3], na.rm = TRUE)}
++ 			else {means[i] <- mean(file[ ,2], na.rm = TRUE)}
++ 						}
++ 						}
++ 	else {
++ 		x <- dir()	
++ 		file = read.csv(x[id])
++ 		n = nrow(file)		
++ 		means = vector(mode = "numeric", length = n)
++ 		if (pollutant == "nitrate")
++ 			{means <- mean(file[ ,3], na.rm = TRUE)}
++ 		else {means <- mean(file[ ,2], na.rm = TRUE)}
++ 		}
++ 		print(mean(means, na.rm = TRUE))
++ }
+> 
+> pollutantmean ("specdata", pollutant = "nitrate", 70:72)
+[1] 0.6749954
+> pollutantmean ("specdata", pollutant = "nitrate", 275)
+[1] NaN
+> pollutantmean <- function(directory, pollutant = "", id) {
++ 	setwd (directory)
++ 	if (length(id) > 1){
++ 		x <- dir()	
++ 		n = length(id)		
++ 		means = vector(mode = "numeric", length = n)
++ 		for (i in id) {
++ 			file = read.csv(x[i])
++ 			if (pollutant == "nitrate")
++ 				{means[i] <- mean(file[ ,3], na.rm = TRUE)}
++ 			else {means[i] <- mean(file[ ,2], na.rm = TRUE)}
++ 						}
++ 						}
++ 	else {
++ 		x <- dir()	
++ 		file = read.csv(x[id])
++ 		n = nrow(file)		
++ 		means = vector(mode = "numeric", length = n)
++ 		if (pollutant == "nitrate")
++ 			{means <- mean(file[ ,3], na.rm = TRUE)}
++ 		else {means <- mean(file[ ,2], na.rm = TRUE)}
++ 		}
++ 		print(mean(means, na.rm = TRUE))
++ }
+> 
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 23)
+[1] 1.280833
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 70:72)
+[1] 0.6749954
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 274)
+[1] 0.188775
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 275)
+[1] NaN
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 70:72)
+[1] 0.6749954
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 72)
+[1] 2.363205
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 71)
+[1] 1.431601
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 70)
+[1] 0.2551667
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 70:72)
+[1] 0.6749954
+> pollutantmean <- function(directory, pollutant = "", id) {
++ 	setwd (directory)
++ 	if (length(id) > 1){
++ 		x <- dir()	
++ 		n = length(id)		
++ 		means = vector(mode = "numeric", length = n)
++ 		for (i in id) {
++ 			file = read.csv(x[i])
++ 			if (pollutant == "nitrate")
++ 				{means[i] <- mean(file[ ,3], na.rm = TRUE)}
++ 			else {means[i] <- mean(file[ ,2], na.rm = TRUE)}
++ 						}
++ 						}
++ 	else {
++ 		x <- dir()	
++ 		file = read.csv(x[id])
++ 		n = nrow(file)		
++ 		means = vector(mode = "numeric", length = n)
++ 		if (pollutant == "nitrate")
++ 			{means <- mean(file[ ,3], na.rm = TRUE)}
++ 		else {means <- mean(file[ ,2], na.rm = TRUE)}
++ 		}
++ 		print(means)
++ 		print(mean(means, na.rm = TRUE))
++ }
+> 
+> pollutantmean ("specdata", pollutant = "nitrate", 70:72)
+Error in setwd(directory) : cannot change working directory
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 70:72)
+ [1] 0.0000000 0.0000000 0.0000000        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA
+[19]        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA
+[37]        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA
+[55]        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA 0.2551667 1.4316005 2.3632054
+[1] 0.6749954
+> ?means
+No documentation for ‘means’ in specified packages and libraries:
+you could try ‘??means’
+> ?mean
+> length(mean)
+[1] 1
+> length(means)
+Error: object 'means' not found
+> pollutantmean <- function(directory, pollutant = "", id) {
++ 	setwd (directory)
++ 	if (length(id) > 1){
++ 		x <- dir()	
++ 		n = length(id)		
++ 		means = vector(mode = "numeric", length = n)
++ 		for (i in id) {
++ 			file = read.csv(x[i])
++ 			if (pollutant == "nitrate")
++ 				{means[i] <- mean(file[ ,3], na.rm = TRUE)}
++ 			else {means[i] <- mean(file[ ,2], na.rm = TRUE)}
++ 						}
++ 						}
++ 	else {
++ 		x <- dir()	
++ 		file = read.csv(x[id])
++ 		n = nrow(file)		
++ 		means = vector(mode = "numeric", length = n)
++ 		if (pollutant == "nitrate")
++ 			{means <- mean(file[ ,3], na.rm = TRUE)}
++ 		else {means <- mean(file[ ,2], na.rm = TRUE)}
++ 		}
++ 		print(means)
++ 		print(mean(means, na.rm = TRUE))
++ }
+> length(means)
+Error: object 'means' not found
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 70:72)
+ [1] 0.0000000 0.0000000 0.0000000        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA
+[19]        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA
+[37]        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA
+[55]        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA 0.2551667 1.4316005 2.3632054
+[1] 0.6749954
+> pollutantmean <- function(directory, pollutant = "", id) {
++ 	setwd (directory)
++ 	if (length(id) > 1){
++ 		x <- dir()	
++ 		n = length(id)		
++ 		print(n)
++ 		means = vector(mode = "numeric", length = n)
++ 		for (i in id) {
++ 			file = read.csv(x[i])
++ 			if (pollutant == "nitrate")
++ 				{means[i] <- mean(file[ ,3], na.rm = TRUE)}
++ 			else {means[i] <- mean(file[ ,2], na.rm = TRUE)}
++ 						}
++ 						}
++ 	else {
++ 		x <- dir()	
++ 		file = read.csv(x[id])
++ 		n = nrow(file)		
++ 		means = vector(mode = "numeric", length = n)
++ 		if (pollutant == "nitrate")
++ 			{means <- mean(file[ ,3], na.rm = TRUE)}
++ 		else {means <- mean(file[ ,2], na.rm = TRUE)}
++ 		}
++ 		print(means)
++ 		print(mean(means, na.rm = TRUE))
++ }
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 70:72)
+[1] 3
+ [1] 0.0000000 0.0000000 0.0000000        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA
+[19]        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA
+[37]        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA
+[55]        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA        NA 0.2551667 1.4316005 2.3632054
+[1] 0.6749954
+> pollutantmean <- function(directory, pollutant = "", id) {
++ 	setwd (directory)
++ 	if (length(id) > 1){
++ 		x <- dir()	
++ 		n = length(id)		
++ 		print(n)
++ 		means = vector(mode = "numeric", length = n)
++ 		for (i in id) {
++ 			file = read.csv(x[i])
++ 			if (pollutant == "nitrate")
++ 				{means[i] <- mean(file[ ,3], na.rm = TRUE)}
++ 			else {means[i] <- mean(file[ ,2], na.rm = TRUE)}
++ 						}
++ 						}
++ 	else {
++ 		x <- dir()	
++ 		file = read.csv(x[id])
++ 		n = nrow(file)		
++ 		means = vector(mode = "numeric", length = n)
++ 		if (pollutant == "nitrate")
++ 			{means <- mean(file[ ,3], na.rm = TRUE)}
++ 		else {means <- mean(file[ ,2], na.rm = TRUE)}
++ 		}
++ 		print(length(means))
++ 		print(mean(means, na.rm = TRUE))
++ }
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 70:72)
+[1] 3
+[1] 72
+[1] 0.6749954
+> pollutantmean <- function(directory, pollutant = "", id) {
++ 	setwd (directory)
++ 	if (length(id) > 1){
++ 		x <- dir()	
++ 		n = length(id)		
++ 		print(n)
++ 		means = vector(mode = "numeric", length = n)
++ 		print(length(means))
++ 		for (i in id) {
++ 			file = read.csv(x[i])
++ 			if (pollutant == "nitrate")
++ 				{means[i] <- mean(file[ ,3], na.rm = TRUE)}
++ 			else {means[i] <- mean(file[ ,2], na.rm = TRUE)}
++ 						}
++ 						}
++ 	else {
++ 		x <- dir()	
++ 		file = read.csv(x[id])
++ 		n = nrow(file)		
++ 		means = vector(mode = "numeric", length = n)
++ 		if (pollutant == "nitrate")
++ 			{means <- mean(file[ ,3], na.rm = TRUE)}
++ 		else {means <- mean(file[ ,2], na.rm = TRUE)}
++ 		}
++ 		print(length(means))
++ 		print(mean(means, na.rm = TRUE))
++ }
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 70:72)
+[1] 3
+[1] 3
+[1] 72
+[1] 0.6749954
+> pollutantmean <- function(directory, pollutant = "", id) {
++ 	setwd (directory)
++ 	if (length(id) > 1){
++ 		x <- dir()	
++ 		n = length(id)		
++ 		print(n)
++ 		means = vector(mode = "numeric", length = n)
++ 		print(length(means))
++ 		for (i in id) {
++ 			print(i)
++ 			file = read.csv(x[i])
++ 			if (pollutant == "nitrate")
++ 				{means[i] <- mean(file[ ,3], na.rm = TRUE)}
++ 			else {means[i] <- mean(file[ ,2], na.rm = TRUE)}
++ 						}
++ 						}
++ 	else {
++ 		x <- dir()	
++ 		file = read.csv(x[id])
++ 		n = nrow(file)		
++ 		means = vector(mode = "numeric", length = n)
++ 		if (pollutant == "nitrate")
++ 			{means <- mean(file[ ,3], na.rm = TRUE)}
++ 		else {means <- mean(file[ ,2], na.rm = TRUE)}
++ 		}
++ 		print(length(means))
++ 		print(mean(means, na.rm = TRUE))
++ }
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 70:72)
+[1] 3
+[1] 3
+[1] 70
+[1] 71
+[1] 72
+[1] 72
+[1] 0.6749954
+> pollutantmean <- function(directory, pollutant = "", id) {
++ 	setwd (directory)
++ 	if (length(id) > 1){
++ 		x <- dir()	
++ 		n = length(id)		
++ 		print(n)
++ 		means = vector(mode = "numeric", length = n)
++ 		print(length(means))
++ 		z <- 1
++ 		for (i in id) {
++ 			file = read.csv(x[i])
++ 			if (pollutant == "nitrate")
++ 				{means[z] <- mean(file[ ,3], na.rm = TRUE); z=+}
+Error: unexpected '}' in:
+"                        if (pollutant == "nitrate")
+                                {means[z] <- mean(file[ ,3], na.rm = TRUE); z=+}"
+> 			else {means[z] <- mean(file[ ,2], na.rm = TRUE); z=+}
+Error: unexpected 'else' in "                        else"
+> 						}
+Error: unexpected '}' in "                                                }"
+> 						}
+Error: unexpected '}' in "                                                }"
+> 	else {
+Error: unexpected 'else' in "        else"
+> 		x <- dir()	
+> 		file = read.csv(x[id])
+Error in read.table(file = file, header = header, sep = sep, quote = quote,  : 
+  object 'id' not found
+> 		n = nrow(file)		
+> 		means = vector(mode = "numeric", length = n)
+> 		if (pollutant == "nitrate")
++ 			{means <- mean(file[ ,3], na.rm = TRUE)}
+Error: object 'pollutant' not found
+> 		else {means <- mean(file[ ,2], na.rm = TRUE)}
+Error: unexpected 'else' in "                else"
+> 		}
+Error: unexpected '}' in "                }"
+> 		print(length(means))
+[1] 1461
+> 		print(mean(means, na.rm = TRUE))
+[1] 0
+> }
+Error: unexpected '}' in "}"
+> pollutantmean <- function(directory, pollutant = "", id) {
++ 	setwd (directory)
++ 	if (length(id) > 1){
++ 		x <- dir()	
++ 		n = length(id)		
++ 		print(n)
++ 		means = vector(mode = "numeric", length = n)
++ 		print(length(means))
++ 		z <- 1
++ 		for (i in id) {
++ 			file = read.csv(x[i])
++ 			if (pollutant == "nitrate")
++ 				{means[z] <- mean(file[ ,3], na.rm = TRUE); z = z + 1}
++ 			else {means[z] <- mean(file[ ,2], na.rm = TRUE); z = z + 1}
++ 						}
++ 						}
++ 	else {
++ 		x <- dir()	
++ 		file = read.csv(x[id])
++ 		n = nrow(file)		
++ 		means = vector(mode = "numeric", length = n)
++ 		if (pollutant == "nitrate")
++ 			{means <- mean(file[ ,3], na.rm = TRUE)}
++ 		else {means <- mean(file[ ,2], na.rm = TRUE)}
++ 		}
++ 		print(length(means))
++ 		print(mean(means, na.rm = TRUE))
++ }
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 70:72)
+[1] 3
+[1] 3
+[1] 3
+[1] 1.349991
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "sulphate", 1:10)
+[1] 10
+[1] 10
+[1] 10
+[1] 3.806771
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 23)
+[1] 1
+[1] 1.280833
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 70:72)
+[1] 3
+[1] 3
+[1] 3
+[1] 1.349991
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 1)
+[1] 1
+[1] 0.5499098
+> pollutantmean <- function(directory, pollutant = "", id) {
++ 	setwd (directory)
++ 	if (length(id) > 1){
++ 		x <- dir()	
++ 		n = length(id)		
++ 		means = vector(mode = "numeric", length = n)
++ 		print(length(means))
++ 		z <- 1
++ 		for (i in id) {
++ 			file = read.csv(x[i])
++ 			if (pollutant == "nitrate")
++ 				{means[z] <- mean(file[ ,3], na.rm = TRUE); z = z + 1}
++ 			else {means[z] <- mean(file[ ,2], na.rm = TRUE); z = z + 1}
++ 						}
++ 						}
++ 	else {
++ 		x <- dir()	
++ 		file = read.csv(x[id])
++ 		n = nrow(file)		
++ 		means = vector(mode = "numeric", length = n)
++ 		if (pollutant == "nitrate")
++ 			{means <- mean(file[ ,3], na.rm = TRUE)}
++ 		else {means <- mean(file[ ,2], na.rm = TRUE)}
++ 		}
++ 		print(length(means))
++ 		print(mean(means, na.rm = TRUE))
++ }
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 1)
+[1] 1
+[1] 0.5499098
+> pollutantmean <- function(directory, pollutant = "", id) {
++ 	setwd (directory)
++ 	if (length(id) > 1){
++ 		x <- dir()	
++ 		n = length(id)		
++ 		means = vector(mode = "numeric", length = n)
++ 		z <- 1
++ 		for (i in id) {
++ 			file = read.csv(x[i])
++ 			if (pollutant == "nitrate")
++ 				{means[z] <- mean(file[ ,3], na.rm = TRUE); z = z + 1}
++ 			else {means[z] <- mean(file[ ,2], na.rm = TRUE); z = z + 1}
++ 						}
++ 						}
++ 	else {
++ 		x <- dir()	
++ 		file = read.csv(x[id])
++ 		n = nrow(file)		
++ 		means = vector(mode = "numeric", length = n)
++ 		if (pollutant == "nitrate")
++ 			{means <- mean(file[ ,3], na.rm = TRUE)}
++ 		else {means <- mean(file[ ,2], na.rm = TRUE)}
++ 		}
++ 		print(mean(means, na.rm = TRUE))
++ }
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 1)
+[1] 0.5499098
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 2)
+[1] 0.9449682
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "nitrate", 3)
+[1] 0.6530321
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "sulphate", 1)
+[1] 3.880701
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "sulphate", 2)
+[1] 4.460811
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "sulphate", 3)
+[1] 4.327613
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "sulphate", 4)
+[1] 4.214956
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "sulphate", 5)
+[1] 4.210072
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "sulphate", 6)
+[1] 4.102132
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "sulphate", 7)
+[1] 3.820059
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "sulphate", 8)
+[1] 4.781354
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "sulphate", 9)
+[1] 3.645644
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "sulphate", 10)
+[1] 0.6243649
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "sulphate", 1:10)
+[1] 3.806771
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "sulphate", 10)
+[1] 0.6243649
+> pollutantmean ("/Users/shantanupawar/Desktop/Coursera/R-programming/specdata", pollutant = "sulphate", 1:9)
+[1] 4.160371
+> pollutantmean <- function(directory, pollutant = "", id) {
++ 	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/specdata"}
++ 	setwd (directory)
++ 	if (length(id) > 1){
++ 		x <- dir()	
++ 		n = length(id)		
++ 		means = vector(mode = "numeric", length = n)
++ 		z <- 1
++ 		for (i in id) {
++ 			file = read.csv(x[i])
++ 			if (pollutant == "nitrate")
++ 				{means[z] <- mean(file[ ,3], na.rm = TRUE); z = z + 1}
++ 			else {means[z] <- mean(file[ ,2], na.rm = TRUE); z = z + 1}
++ 						}
++ 						}
++ 	else {
++ 		x <- dir()	
++ 		file = read.csv(x[id])
++ 		n = nrow(file)		
++ 		means = vector(mode = "numeric", length = n)
++ 		if (pollutant == "nitrate")
++ 			{means <- mean(file[ ,3], na.rm = TRUE)}
++ 		else {means <- mean(file[ ,2], na.rm = TRUE)}
++ 		}
++ 		print(mean(means, na.rm = TRUE))
++ }
+> pollutantmean ("specdata", pollutant = "sulphate", 1:9)
+[1] 4.160371
+> pollutantmean ("specdata", pollutant = "sulphate", 1:10)
+[1] 3.806771
+> complete <- function(directory, id) {
++ 	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/specdata"}
++ 	setwd (directory)
++ 	x <- dir()	
++ 	n = length(id)
++ 	tab <- data.frame(MonitorID = numeric(n), cases = numeric(n))
++ 	dim(tab)
++ if (n > 1){	
++ 	for (i in id) {
++ 		file <- read.csv(x[i])
++ 		cc <- complete.cases(file)
++ 		logi <- table(cc)
++ 		if (nrow(file) == logi[[1]]) { 
++ 			tab$MonitorID[i] <- 0      
++ 			tab$cases[i] <- 0}
++ 		else {
++ 			tab$MonitorID[i] <- i
++     		tab$cases[i] <- logi[[2]]
++ }}}
++ else 
++ {		
++ 	file <- read.csv(x[id])
++ 	cc <- complete.cases(file)
++ 	logi <- table(cc)
++ 	if (nrow(file) == logi[[1]]) { 
++ 		tab$MonitorID[n] <- 0      
++ 		tab$cases[n] <- 0}
++ 	else {
++ 		tab$MonitorID[n] <- id
++     	tab$cases[n] <- logi[[2]]
++ }
++ 			}
++ print(tab)
++  } 
+> complete ("specdata", 1:10)
+   MonitorID cases
+1          1   117
+2          2  1041
+3          3   243
+4          4   474
+5          5   402
+6          6   228
+7          7   442
+8          8   192
+9          9   275
+10        10   148
+> complete ("specdata", 1:100)
+    MonitorID cases
+1           1   117
+2           2  1041
+3           3   243
+4           4   474
+5           5   402
+6           6   228
+7           7   442
+8           8   192
+9           9   275
+10         10   148
+11         11   443
+12         12    96
+13         13    46
+14         14    96
+15         15    83
+16         16    60
+17         17   927
+18         18    84
+19         19   353
+20         20   124
+21         21   426
+22         22   135
+23         23   492
+24         24   885
+25         25   463
+26         26   586
+27         27   338
+28         28   475
+29         29   711
+30         30   932
+31         31   483
+32         32   616
+33         33   466
+34         34   165
+35         35   509
+36         36   495
+37         37   497
+38         38   491
+39         39   734
+40         40    21
+41         41   227
+42         42    60
+43         43    74
+44         44   283
+45         45   424
+46         46    89
+47         47   540
+48         48    62
+49         49   473
+50         50   459
+51         51   193
+52         52   812
+53         53   342
+54         54   219
+55         55   372
+56         56   642
+57         57   452
+58         58   391
+59         59   445
+60         60   448
+61         61   155
+62         62   414
+63         63   403
+64         64   932
+65         65    66
+66         66   374
+67         67   436
+68         68   418
+69         69    15
+70         70   124
+71         71   360
+72         72   406
+73         73    60
+74         74   462
+75         75   779
+76         76   385
+77         77   345
+78         78   275
+79         79   132
+80         80   302
+81         81   100
+82         82    96
+83         83   280
+84         84   169
+85         85   120
+86         86   462
+87         87   374
+88         88   312
+89         89   858
+90         90    56
+91         91   366
+92         92    49
+93         93   393
+94         94   309
+95         95    81
+96         96   873
+97         97   243
+98         98   736
+99         99   479
+100       100   104
+> complete ("specdata", 1:332)
+    MonitorID cases
+1           1   117
+2           2  1041
+3           3   243
+4           4   474
+5           5   402
+6           6   228
+7           7   442
+8           8   192
+9           9   275
+10         10   148
+11         11   443
+12         12    96
+13         13    46
+14         14    96
+15         15    83
+16         16    60
+17         17   927
+18         18    84
+19         19   353
+20         20   124
+21         21   426
+22         22   135
+23         23   492
+24         24   885
+25         25   463
+26         26   586
+27         27   338
+28         28   475
+29         29   711
+30         30   932
+31         31   483
+32         32   616
+33         33   466
+34         34   165
+35         35   509
+36         36   495
+37         37   497
+38         38   491
+39         39   734
+40         40    21
+41         41   227
+42         42    60
+43         43    74
+44         44   283
+45         45   424
+46         46    89
+47         47   540
+48         48    62
+49         49   473
+50         50   459
+51         51   193
+52         52   812
+53         53   342
+54         54   219
+55         55   372
+56         56   642
+57         57   452
+58         58   391
+59         59   445
+60         60   448
+61         61   155
+62         62   414
+63         63   403
+64         64   932
+65         65    66
+66         66   374
+67         67   436
+68         68   418
+69         69    15
+70         70   124
+71         71   360
+72         72   406
+73         73    60
+74         74   462
+75         75   779
+76         76   385
+77         77   345
+78         78   275
+79         79   132
+80         80   302
+81         81   100
+82         82    96
+83         83   280
+84         84   169
+85         85   120
+86         86   462
+87         87   374
+88         88   312
+89         89   858
+90         90    56
+91         91   366
+92         92    49
+93         93   393
+94         94   309
+95         95    81
+96         96   873
+97         97   243
+98         98   736
+99         99   479
+100       100   104
+101       101    64
+102       102   145
+103       103   439
+104       104   385
+105       105   237
+106       106    74
+107       107     7
+108       108   454
+109       109   223
+110       110   234
+111       111   329
+112       112   242
+113       113   348
+114       114   753
+115       115   177
+116       116   806
+117       117   285
+118       118    12
+119       119   150
+120       120   687
+121       121   828
+122       122   178
+123       123   349
+124       124   277
+125       125   422
+126       126   108
+127       127   428
+128       128   390
+129       129    53
+130       130   101
+131       131   201
+132       132   260
+133       133   978
+134       134   100
+135       135    41
+136       136   397
+137       137     2
+138       138   847
+139       139   241
+140       140   407
+141       141   183
+142       142   209
+143       143   194
+144       144   682
+145       145   226
+146       146    53
+147       147   302
+148       148   822
+149       149   164
+150       150   685
+151       151   233
+152       152   650
+153       153   177
+154       154  1095
+155       155    79
+156       156   298
+157       157    89
+158       158   671
+159       159    72
+160       160   646
+161       161   145
+162       162     2
+163       163    73
+164       164   151
+165       165   761
+166       166   207
+167       167   558
+168       168   523
+169       169    17
+170       170   741
+171       171   614
+172       172   776
+173       173   234
+174       174   278
+175       175     3
+176       176   621
+177       177   971
+178       178   422
+179       179   551
+180       180   576
+181       181   286
+182       182   465
+183       183   332
+184       184   816
+185       185   923
+186       186   432
+187       187     4
+188       188   431
+189       189   174
+190       190   342
+191       191   463
+192       192   154
+193       193   317
+194       194   928
+195       195   304
+196       196   753
+197       197   334
+198       198   858
+199       199   217
+200       200   460
+201       201   409
+202       202   661
+203       203   431
+204       204   125
+205       205   361
+206       206    73
+207       207    51
+208       208   121
+209       209   151
+210       210   311
+211       211   121
+212       212    51
+213       213   345
+214       214   431
+215       215   469
+216       216   251
+217       217   181
+218       218   216
+219       219   182
+220       220   407
+221       221   199
+222       222   445
+223       223   899
+224       224    16
+225       225   332
+226       226    16
+227       227   278
+228       228   548
+229       229   431
+230       230   180
+231       231   470
+232       232   886
+233       233   137
+234       234   253
+235       235    12
+236       236    52
+237       237   146
+238       238    74
+239       239   410
+240       240   407
+241       241   439
+242       242   344
+243       243   398
+244       244   440
+245       245   432
+246       246   428
+247       247   191
+248       248  1005
+249       249   230
+250       250   180
+251       251    27
+252       252   509
+253       253   531
+254       254   437
+255       255   657
+256       256    96
+257       257   886
+258       258   444
+259       259    76
+260       260   386
+261       261    50
+262       262   245
+263       263   357
+264       264    44
+265       265   438
+266       266   439
+267       267   403
+268       268   424
+269       269   191
+270       270   411
+271       271   499
+272       272   253
+273       273   203
+274       274     4
+275         0     0
+276         0     0
+277       277   908
+278         0     0
+279       279   822
+280       280    15
+281       281    81
+282       282    92
+283       283    90
+284       284    87
+285       285    83
+286         0     0
+287       287   812
+288       288    40
+289         0     0
+290       290    91
+291         0     0
+292         0     0
+293         0     0
+294         0     0
+295       295    75
+296       296    14
+297       297    10
+298       298    66
+299       299   331
+300       300   927
+301       301   438
+302       302   937
+303       303   585
+304       304   135
+305       305   263
+306       306   203
+307       307   174
+308       308    79
+309       309   213
+310       310   232
+311       311    65
+312       312   216
+313       313   368
+314       314   888
+315       315   183
+316       316    77
+317       317    47
+318       318   200
+319       319   113
+320       320   627
+321       321   353
+322       322   301
+323       323    34
+324       324    34
+325       325   817
+326       326   215
+327       327   162
+328       328   967
+329       329   439
+330       330   447
+331       331   284
+332       332    16
+> complete ("specdata", 332)
+  MonitorID cases
+1       332    16
+> complete ("specdata", c(2, 4, 8, 10, 12))
+Error in `$<-.data.frame`(`*tmp*`, "MonitorID", value = c(0, 2, 0, 4,  : 
+  replacement has 8 rows, data has 5
+> complete ("specdata", 30:25)
+Error in `$<-.data.frame`(`*tmp*`, "MonitorID", value = c(0, 0, 0, 0,  : 
+  replacement has 30 rows, data has 6
+> complete ("specdata", 3)
+  MonitorID cases
+1         3   243
+> complete <- function(directory, id) {
++ 	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/specdata"}
++ 	setwd (directory)
++ 	print(length(id))
++ 	x <- dir()	
++ 	n = length(id)
++ 	tab <- data.frame(MonitorID = numeric(n), cases = numeric(n))
++ 	dim(tab)
++ if (n > 1){	
++ 	for (i in id) {
++ 		file <- read.csv(x[i])
++ 		cc <- complete.cases(file)
++ 		logi <- table(cc)
++ 		if (nrow(file) == logi[[1]]) { 
++ 			tab$MonitorID[i] <- 0      
++ 			tab$cases[i] <- 0}
++ 		else {
++ 			tab$MonitorID[i] <- i
++     		tab$cases[i] <- logi[[2]]
++ }}}
++ else 
++ {		
++ 	file <- read.csv(x[id])
++ 	cc <- complete.cases(file)
++ 	logi <- table(cc)
++ 	if (nrow(file) == logi[[1]]) { 
++ 		tab$MonitorID[n] <- 0      
++ 		tab$cases[n] <- 0}
++ 	else {
++ 		tab$MonitorID[n] <- id
++     	tab$cases[n] <- logi[[2]]
++ }
++ 			}
++ print(tab)
++  } 
+> 	
+> complete ("specdata", 30:25)
+[1] 6
+Error in `$<-.data.frame`(`*tmp*`, "MonitorID", value = c(0, 0, 0, 0,  : 
+  replacement has 30 rows, data has 6
+> complete ("specdata", c(2, 4, 8, 10, 12))
+[1] 5
+Error in `$<-.data.frame`(`*tmp*`, "MonitorID", value = c(0, 2, 0, 4,  : 
+  replacement has 8 rows, data has 5
+> complete <- function(directory, id) {
++ 	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/specdata"}
++ 	setwd (directory)
++ 	print(length(id))
++ 	x <- dir()	
++ 	n = length(id)
++ 	z <- 1
++ 	tab <- data.frame(MonitorID = numeric(n), cases = numeric(n))
++ if (n > 1){	
++ 	for (i in id) {
++ 		file <- read.csv(x[i])
++ 		cc <- complete.cases(file)
++ 		logi <- table(cc)
++ 		if (nrow(file) == logi[[1]]) { 
++ 			tab$MonitorID[z] <- 0      
++ 			tab$cases[z] <- 0;
++ 			z = z + 1}
++ 		else {
++ 			tab$MonitorID[z] <- i
++     		tab$cases[z] <- logi[[2]];
++     		z = z + 1
++ }}}
++ else 
++ {		
++ 	file <- read.csv(x[id])
++ 	cc <- complete.cases(file)
++ 	logi <- table(cc)
++ 	if (nrow(file) == logi[[1]]) { 
++ 		tab$MonitorID[n] <- 0      
++ 		tab$cases[n] <- 0}
++ 	else {
++ 		tab$MonitorID[n] <- id
++     	tab$cases[n] <- logi[[2]]
++ }
++ 			}
++ print(tab)
++  } 
+> 	
+> complete ("specdata", c(2, 4, 8, 10, 12))
+[1] 5
+  MonitorID cases
+1         2  1041
+2         4   474
+3         8   192
+4        10   148
+5        12    96
+> complete ("specdata", 30:25)
+[1] 6
+  MonitorID cases
+1        30   932
+2        29   711
+3        28   475
+4        27   338
+5        26   586
+6        25   463
+> corr <- function(directory, threshold) {
++ 	if (directory == "specdata") {directory = "/Users/shantanupawar/Desktop/Coursera/R-programming/specdata"}
++ 	setwd (directory)
++ 	x <- dir()	
++ 	z <- 0
++ 	n = length(x)
++ 	tab <- data.frame(MonitorID = numeric(n), cases = numeric(n))
++ 	for (i in 1:n) {
++ 		file <- read.csv(x[i])
++ 		cc <- complete.cases(file)
++ 		logi <- table(cc)
++ 		if (nrow(file) == logi[[1]]) { 
++ 			tab$MonitorID[i] <- 0      
++ 			tab$cases[i] <- 0
++ 			}
++ 		else {
++ 			tab$MonitorID[i] <- i
++     		tab$cases[i] <- logi[[2]]
++ }} 
++ 	
++ 	if (threshold <= max(tab$cases) && threshold >=0)
++ 	{newtab <- subset(tab, cases > threshold, select = c(MonitorID, cases))
++ 	m <- newtab$MonitorID
++ 	z <- length(newtab$cases)
++ 	e <- vector(mode = "numeric", length = z)
++ 	for (i in 1:z) {
++ 		file <- read.csv(x[m[[i]]])
++ 		e[i] <- cor(file[[2]], file[[3]], use = "complete.obs")
++ 	}
++ 	print(e)}
++ 	else {print(z)}
++ }
+> corr ("specdata", 150)
+  [1] -0.018957541 -0.140512544 -0.043897372 -0.068159562 -0.123506666 -0.075888144 -0.159673652 -0.086841940  0.763128837 -0.157828603 -0.156998919 -0.044898818  0.117249264  0.259057178
+ [15]  0.133274607  0.366201078  0.580751264  0.006863930  0.726693888  0.057741676  0.115338086  0.465754012  0.515804375  0.412693537  0.375631176  0.315725317  0.244560561  0.594426499
+ [29]  0.553514976  0.614340566  0.460513619  0.405022501  0.434789780  0.088421364  0.118136697 -0.091022820 -0.033091304  0.440660466 -0.029683708  0.268525390  0.277220958 -0.049108453
+ [43]  0.322627410  0.091139374 -0.025750053  0.120521602 -0.061746831  0.041306963 -0.146202136 -0.162485185 -0.097254393  0.089262856  0.568403991  0.711864008  0.268203237  0.190644585
+ [57]  0.227222983  0.229238882  0.005635506  0.018628108 -0.064750174  0.096614297  0.002864405  0.107184775  0.128477284 -0.042533572 -0.137041337  0.136609030  0.118975253  0.098073855
+ [71]  0.066928310  0.100212474 -0.063984344 -0.066525489 -0.129245884 -0.111066409 -0.089441210 -0.114090325 -0.106280702 -0.176855164 -0.116984680  0.019138583  0.100643502 -0.073858484
+ [85]  0.036665921 -0.107957809  0.296744105  0.347421569  0.146528765  0.362414577  0.093330832  0.198915192  0.164602262  0.180626975  0.176508543  0.139158631  0.231984399  0.227615918
+ [99]  0.275903634  0.299630040  0.248143145  0.298344178 -0.056325366 -0.178114558  0.002032940 -0.022802183 -0.001202233  0.085217423 -0.076409023  0.010021716  0.016411646 -0.038785934
+[113] -0.075297768  0.041917773  0.193324040  0.596929143  0.113596590 -0.143750037 -0.017703373  0.284905360  0.305506111  0.150031306  0.134895077  0.172850003  0.286076203 -0.106687748
+[127]  0.244744168  0.337120085  0.424798956  0.095921881  0.022899033  0.143330735  0.087196218  0.408741028  0.425176879  0.361728434 -0.035090337 -0.082388453 -0.094742313 -0.087573726
+[141] -0.060405837 -0.092398269 -0.183197353  0.124650112 -0.053001162 -0.039911536  0.010158287  0.451828854  0.295793699  0.615268727 -0.075214053  0.132207405  0.089547098 -0.019086127
+[155] -0.045552626  0.211599525 -0.073972834  0.112668377  0.138387891 -0.003207550 -0.052643174  0.042168144 -0.067460173 -0.030882797  0.017805647  0.026138073 -0.050287543  0.016535643
+[169]  0.199919014  0.482158286  0.355110474  0.589606340  0.368038099 -0.029094866 -0.074495323  0.262101561 -0.005386993  0.258826380  0.144110820  0.101915017  0.023020993  0.074594252
+[183]  0.256665139  0.162401158 -0.003454405  0.190141976  0.184581239  0.120596460 -0.176233152 -0.144699131  0.147074115  0.273520382  0.109557323 -0.092863394 -0.182752126 -0.008836513
+[197]  0.356592359 -0.089133895 -0.017185129 -0.156323514 -0.042538204  0.010235676 -0.009912754 -0.042910367 -0.210567709 -0.155957816  0.046211272 -0.060808231  0.160865053  0.615095781
+[211]  0.598343330  0.506535631  0.191834811 -0.024723462 -0.150627164 -0.002500089 -0.166201361  0.619349867  0.531380642  0.520115665  0.466673962  0.518820173  0.394191512  0.379446208
+[225] -0.123172036 -0.061565518 -0.180133963  0.253978075  0.139867175  0.316429404  0.268780500  0.279397143  0.267260662  0.287133842
+> corr ("specdata", 400)
+  [1] -0.018957541 -0.043897372 -0.068159562 -0.075888144  0.763128837 -0.157828603 -0.044898818  0.117249264  0.259057178  0.133274607  0.366201078  0.006863930  0.726693888  0.057741676
+ [15]  0.115338086  0.465754012  0.515804375  0.375631176  0.315725317  0.244560561  0.594426499  0.553514976  0.405022501  0.434789780  0.088421364  0.118136697 -0.033091304  0.277220958
+ [29] -0.049108453  0.091139374 -0.025750053 -0.061746831  0.041306963 -0.146202136 -0.097254393  0.089262856  0.711864008  0.268203237  0.190644585  0.002864405 -0.042533572  0.098073855
+ [43]  0.100212474 -0.063984344 -0.066525489 -0.089441210  0.100643502  0.036665921  0.296744105  0.347421569  0.198915192  0.164602262  0.231984399  0.275903634  0.248143145  0.002032940
+ [57]  0.085217423  0.010021716 -0.038785934  0.041917773  0.596929143  0.113596590 -0.017703373  0.305506111  0.150031306  0.134895077  0.172850003  0.286076203  0.337120085  0.424798956
+ [71]  0.095921881  0.022899033  0.143330735  0.408741028  0.361728434 -0.035090337 -0.082388453 -0.094742313 -0.092398269 -0.053001162  0.010158287  0.295793699 -0.075214053  0.132207405
+ [85]  0.089547098 -0.019086127  0.138387891 -0.003207550  0.017805647 -0.050287543  0.016535643  0.355110474  0.589606340 -0.029094866 -0.074495323 -0.005386993  0.258826380  0.144110820
+ [99]  0.074594252  0.256665139  0.162401158  0.190141976 -0.176233152 -0.144699131  0.147074115  0.273520382  0.109557323 -0.092863394 -0.089133895 -0.017185129 -0.156323514 -0.042538204
+[113] -0.009912754 -0.042910367  0.046211272 -0.060808231  0.160865053  0.598343330  0.506535631  0.191834811 -0.024723462  0.518820173 -0.123172036  0.253978075  0.268780500  0.279397143
+[127]  0.267260662
+> corr ("specdata", 5000)
+[1] 0
+> 
